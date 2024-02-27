@@ -1,6 +1,15 @@
-<script>
+<script lang="ts">
+    const closeNavbar = () => {
+        const navbarToggler = document.querySelector('.navbar-toggler') as HTMLElement;
+        const navbarCollapse = document.querySelector('.navbar-collapse') as HTMLElement;
+        
+        // Check if the navbarToggler is visible (which means we're on a small screen)
+        if (navbarToggler && navbarCollapse && navbarToggler.offsetParent !== null) {
+            // Manually toggle the 'show' class to open/close the navbar
+            navbarCollapse.classList.toggle('show');
+        }
+    }
 </script>
-
 <style>
     .page-container {
         display: flex;
@@ -45,10 +54,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/transactions">Transaction</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/budgeting">Budgeting</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/" on:click={closeNavbar}>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/dashboard" on:click={closeNavbar}>Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/transactions" on:click={closeNavbar}>Transaction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/budgeting" on:click={closeNavbar}>Budgeting</a></li>
                 </ul>
             </div>
         </div>
