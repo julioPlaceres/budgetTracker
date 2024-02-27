@@ -2,6 +2,17 @@
 </script>
 
 <style>
+    .page-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    .content-wrapper {
+        flex: 1;
+        padding: 1rem;
+    }
+    
     nav {
         background-color: #fff; /* Adjust background color */
         box-shadow: 0 2px 4px rgba(0,0,0,.1); /* Soft shadow for depth */
@@ -25,7 +36,7 @@
     }
 </style>
 
-<div>
+<div class="page-container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Finance Me!</a>
@@ -36,15 +47,17 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/transaction">Transaction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/transactions">Transaction</a></li>
                     <li class="nav-item"><a class="nav-link" href="/budgeting">Budgeting</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <div class="content-wrapper">
     <slot></slot> <!-- Your page content will be injected here -->
-
+    </div>
+    
     <footer>
         <p>© 2024 Finance Me! All rights reserved.</p>
     </footer>
