@@ -99,7 +99,7 @@
                     <li class="nav-item"><a class="nav-link" href="/" on:click={collapseNavbar}>Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/dashboard" on:click={collapseNavbar}>Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="/transactions" on:click={collapseNavbar}>Transaction</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/budgeting" on:click={collapseNavbar}>Budgeting</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/bills" on:click={collapseNavbar}>Budgeting</a></li>
                 </ul>
             </div>
         </div>

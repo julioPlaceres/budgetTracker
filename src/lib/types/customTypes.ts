@@ -3,3 +3,11 @@ export type Transaction = {
 	date: string;
 	amount: number;
 }
+
+export type Bill = {
+	name: string;
+	amount: number;
+	date: string;
+	frequency: string;
+	type: string;
+}
