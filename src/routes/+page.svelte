@@ -1,18 +1,32 @@
 <script lang="ts">
-  import { goto } from '$app/navigation';
 </script>
   
   <style>
     /* Base styles */
     :global(body) {
       font-family: 'Roboto', sans-serif;
+      font-size: 0.7rem;
     }
     
     /* Hero section */
     .hero {
-      background-color: #f0f2f5;
+      background-image: url("/bkg-lion03.webp");
+      background-size: cover;
+      background-position: center;
       padding: 2rem;
       text-align: center;
+      height: 200px;
+    }
+    
+    .hero > h1 {
+      color: #007bff;
+    }
+    
+    .hero > p {
+      color: #ffffff;
+      text-align: center;
+      font-size: 0.6rem;
+      margin-top: 2rem;
     }
     
     /* Overview widgets */
@@ -23,7 +37,7 @@
     }
     .widget {
       background: white;
-      padding: 1rem;
+      padding: 0.5rem;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       width: 30%;
@@ -55,6 +69,7 @@
   
   <div class="hero">
     <h1>Welcome to Finance Me!</h1>
+    <p>Weep no more; behold, the Lion of the tribe of Judah, the Root of David, has conquered - Revelation 5:5</p>
   </div>
   
   <div class="overview-widgets">
