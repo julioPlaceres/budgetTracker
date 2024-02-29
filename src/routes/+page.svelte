@@ -1,6 +1,6 @@
 <script lang="ts">
-    // Import necessary components and utilities if needed
-  </script>
+  import { goto } from '$app/navigation';
+</script>
   
   <style>
     /* Base styles */
@@ -27,7 +27,9 @@
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       width: 30%;
+      color: black;
       text-align: center;
+      text-decoration: none;
     }
     
     /* Features section */
@@ -37,6 +39,8 @@
       padding: 2rem 0;
     }
     .feature {
+      color: black;
+      text-decoration: none;
       text-align: center;
     }
     
@@ -51,32 +55,31 @@
   
   <div class="hero">
     <h1>Welcome to Finance Me!</h1>
-    <button>Get Started</button>
   </div>
   
   <div class="overview-widgets">
-    <div class="widget">Current Balance</div>
-    <div class="widget">Recent Transactions</div>
-    <div class="widget">Savings Goal</div>
+    <a href="/dashboard" class="widget">Current Balance</a>
+    <a href="/transactions" class="widget">Recent Transactions</a>
+    <a href="/dashboard" class="widget">Savings Goal</a>
   </div>
   
   <div class="features">
-    <div class="feature">
+    <a href="/dashboard" class="feature">
       <i class="bi bi-graph-up"> </i>
       <p>Dashboard</p>
-    </div>
-    <div class="feature">
+    </a>
+    <a href="/transactions" class="feature">
       <i class="bi bi-wallet2"> </i>
       <p>Transactions</p>
-    </div>
-    <div class="feature">
+    </a>
+    <a href="/reporting" class="feature">
       <i class="bi bi-pie-chart-fill"> </i>
       <p>Reporting</p>
-    </div>
-    <div class="feature">
+    </a>
+    <a href="/bills" class="feature">
       <i class="bi bi-journal-check"> </i>
       <p>Budgeting</p>
-    </div>
+    </a>
   </div>
   
   <div class="reports-cta">
